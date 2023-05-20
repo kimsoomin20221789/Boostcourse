@@ -10,7 +10,7 @@ import UIKit
 class CountriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     @IBOutlet weak var tableView: UITableView! //아웃렛 프로퍼티
-    let cellIdentifier: String = "cell" //identifier
+    let customCellIdentifier: String = "customCell" //identifier
     
     let asia: [String] = ["한국", "일본"] //data
     let europe: [String] = ["독일", "이탈리아", "프랑스"]
@@ -29,7 +29,8 @@ class CountriesViewController: UIViewController, UITableViewDelegate, UITableVie
     //section을 입력받고 section에 해당하는  row가 몇개여야하는지 알려달라는 함수
     //TableView가 물어보는 함수임 : 나 이 section에 몇개의 row 넣어줘야돼?
     //section마다 다른 수를 return
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{   switch section {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        switch section {
         case 0:
             return asia.count
         case 1:
@@ -42,9 +43,13 @@ class CountriesViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     //TableView : row에 해당되는 cell을 넘겨줘!
+    //cellForRowAt: cell을 돌려주는 data 메서드
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
+        //cell 생성
+        let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.customCellIdentifier, for: indexPath) as! CustomTableViewCell
+        //강제캐스팅을 하지 않고 어떻게 해볼깡??
         
+        //cell에 들어갈 text생성
         let text: String
         switch indexPath.section {
         case 0:
@@ -56,7 +61,7 @@ class CountriesViewController: UIViewController, UITableViewDelegate, UITableVie
         default:
             text = "기타"
         }
-        cell.textLabel?.text = text
+        cell.countryLabel?.text = text
         return cell
     }
     
