@@ -52,12 +52,16 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
         var weather: UIImage? {
             switch city.state {
             case 10:
+                cityCell.weatherState = "sunny"
                 return UIImage(named: "sunny")
             case 11:
+                cityCell.weatherState = "cloudy"
                 return UIImage(named: "cloudy")
             case 12:
+                cityCell.weatherState = "rainy"
                 return UIImage(named: "rainy")
             case 13:
+                cityCell.weatherState = "snowy"
                 return UIImage(named: "snowy")
             default:
                 return nil
@@ -96,14 +100,36 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
         super.didReceiveMemoryWarning()
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        guard let nextViewController: WeatherViewController = segue.destination as? WeatherViewController else {return}
+        
+        guard let cell: CityTableViewCell = sender as? CityTableViewCell else {return}
+        
+        nextViewController.weather = cell.weatherState
+        switch cell.weatherState {
+        case "sunny":
+            nextViewController.state = "맑음"
+        case "cloudy":
+            nextViewController.state = "흐림"
+        case "rainy":
+            nextViewController.state = "비"
+        case "snowy":
+            nextViewController.state =  "눈"
+        default:
+            return
+        }
+        
+        if let weatherLabelText = cell.weatherLabel?.text {nextViewController.celsius = weatherLabelText} else {return}
+        if let percentLabelText = cell.rainyPercentLabel?.text {nextViewController.rainPercent = percentLabelText} else {return}
+        
+        
     }
-    */
+    
 
 }

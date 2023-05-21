@@ -17,6 +17,7 @@
 		8031FB6C2A19C7DF00EC47B0 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8031FB6B2A19C7DF00EC47B0 /* CityTableViewCell.swift */; };
 		8031FB6E2A19C81D00EC47B0 /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8031FB6D2A19C81D00EC47B0 /* CityTableViewController.swift */; };
 		8031FB702A19CA8D00EC47B0 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8031FB6F2A19CA8D00EC47B0 /* Cities.swift */; };
+		8031FB722A1A1A1300EC47B0 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8031FB712A1A1A1200EC47B0 /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8031FB6B2A19C7DF00EC47B0 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		8031FB6D2A19C81D00EC47B0 /* CityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		8031FB6F2A19CA8D00EC47B0 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		8031FB712A1A1A1200EC47B0 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				8031FB6D2A19C81D00EC47B0 /* CityTableViewController.swift */,
 				8031FB6B2A19C7DF00EC47B0 /* CityTableViewCell.swift */,
 				8031FB6F2A19CA8D00EC47B0 /* Cities.swift */,
+				8031FB712A1A1A1200EC47B0 /* WeatherViewController.swift */,
 				8031FB5B2A19B7D100EC47B0 /* Main.storyboard */,
 				8031FB5E2A19B7D200EC47B0 /* Assets.xcassets */,
 				8031FB602A19B7D200EC47B0 /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 				8031FB562A19B7D100EC47B0 /* AppDelegate.swift in Sources */,
 				8031FB6C2A19C7DF00EC47B0 /* CityTableViewCell.swift in Sources */,
 				8031FB702A19CA8D00EC47B0 /* Cities.swift in Sources */,
+				8031FB722A1A1A1300EC47B0 /* WeatherViewController.swift in Sources */,
 				8031FB6A2A19BF2C00EC47B0 /* CountriesTableViewCell.swift in Sources */,
 				8031FB582A19B7D100EC47B0 /* SceneDelegate.swift in Sources */,
 			);

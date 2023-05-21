@@ -139,6 +139,7 @@
                                             <outlet property="rainyPercentLabel" destination="dq6-Nm-itC" id="aN4-6l-ifh"/>
                                             <outlet property="weatherImage" destination="um6-QH-YA3" id="X7s-PM-cVd"/>
                                             <outlet property="weatherLabel" destination="TTA-yS-ovY" id="vVf-2l-Ail"/>
+                                            <segue destination="K7L-7j-e3K" kind="show" id="tSI-U4-Xim"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -164,6 +165,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9o8-ds-8xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1922.9007633587785" y="3.5211267605633805"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="Z91-2w-YZT">
+            <objects>
+                <viewController id="K7L-7j-e3K" customClass="WeatherViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mzc-Pp-2fD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AOO-rf-1ML">
+                                <rect key="frame" x="76.666666666666686" y="123" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="b6A-Sx-cTK"/>
+                                    <constraint firstAttribute="height" constant="240" id="u1c-SN-isG"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="A6X-4k-dNH">
+                                <rect key="frame" x="164.66666666666666" y="433" width="64" height="239"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy3-w9-aWH">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="32.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKl-UN-gkD">
+                                        <rect key="frame" x="0.0" y="103.33333333333337" width="64" height="32.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlL-qs-r1d">
+                                        <rect key="frame" x="0.0" y="206.66666666666663" width="64" height="32.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oFI-FQ-bPj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A6X-4k-dNH" firstAttribute="centerX" secondItem="Mzc-Pp-2fD" secondAttribute="centerX" id="0G3-4H-ZJ8"/>
+                            <constraint firstItem="AOO-rf-1ML" firstAttribute="centerX" secondItem="Mzc-Pp-2fD" secondAttribute="centerX" id="GwY-Da-VVp"/>
+                            <constraint firstItem="AOO-rf-1ML" firstAttribute="top" secondItem="oFI-FQ-bPj" secondAttribute="top" constant="20" id="TV9-Om-7Ex"/>
+                            <constraint firstItem="A6X-4k-dNH" firstAttribute="top" secondItem="AOO-rf-1ML" secondAttribute="bottom" constant="30" id="WPe-09-Tem"/>
+                            <constraint firstItem="A6X-4k-dNH" firstAttribute="top" secondItem="AOO-rf-1ML" secondAttribute="bottom" constant="70" id="laC-v9-Jcf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h2j-bd-1oe"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="aKl-UN-gkD" id="SFp-up-FKV"/>
+                        <outlet property="rainPercentLabel" destination="XlL-qs-r1d" id="4gf-UH-LPy"/>
+                        <outlet property="stateLabel" destination="wy3-w9-aWH" id="4fs-W0-9O5"/>
+                        <outlet property="weatherImage" destination="AOO-rf-1ML" id="8PA-Li-rFw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVL-pQ-gWJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2768.7022900763359" y="15.492957746478874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nwb-LK-lF8">

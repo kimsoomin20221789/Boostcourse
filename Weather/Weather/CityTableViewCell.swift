@@ -8,6 +8,7 @@
 import UIKit
 
 class CityTableViewCell: UITableViewCell {
+    var weatherState: String = ""
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var weatherLabel: UILabel!
